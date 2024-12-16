@@ -6,14 +6,15 @@
                    
                     <div class="contact-details">
                         <div class="source-org copyright"><?php bloginfo( 'name' ); ?>&copy;<?php echo date('Y'); ?> </div>
-                        <div>0776 293 7221 </div>
+                        <div>0752 267 0454</div>
                     </div>  
+                    <!--
                     <div class="share">
-                   		 <?php dynamic_sidebar( 'sidebar1' ); ?>
+                   		 <?php // dynamic_sidebar( 'sidebar1' ); ?>
                     	<!--<div class="icon-share-alt"></div>-->
-                    </div>
+                   <!-- </div> -->
                     <div class="email">
-                    <a href="mailto:ianxdev3@gmail.com?Subject=Web%20Portfolio" target="_top">hello@iancross.net</a>
+                    <a href="mailto:ianxdeveloper82@gmail.com?Subject=Web%20Portfolio" target="_top">hello@xwebcreative.com</a>
                     </div>
 
               

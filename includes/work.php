@@ -1,5 +1,5 @@
 
-<div class="title"><h1>my work</h1></div>
+<div class="title"><h1>Projects</h1></div>
 
 <div class="project-wrap">
 
