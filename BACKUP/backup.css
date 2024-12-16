@@ -1,0 +1,412 @@
+#content {
+	position: relative;
+	width: 100%; height: 100%;
+	background: #000;
+	overflow: hidden;
+
+	#top-pane {
+		position: absolute;
+		top: -101%;
+		width: 100%; height: 100vh;
+		background-color: #000;
+	    
+		.vert {
+			 position: relative;
+			 top: 10%;
+			 width: 100%; height: 80%;
+			 
+			.top-content-wrap {
+				position: relative;
+				width: 100%; height: 33.333%;
+				
+				.fa-times { opacity: 0; }
+				.box {
+					position: absolute;
+					top: 5%; left: 50%;
+					height: 90%;
+					border: 2px solid white;
+
+				.cross {
+					
+					width: 99%; height: 99%; 
+						
+					background: transparent;
+					cursor: pointer;
+					-ms-transform: rotate(45deg); /* IE 9 */
+					-webkit-transform: rotate(45deg); /* Safari */
+					transform: rotate(45deg);
+					
+					
+					.top-pane {
+						position: absolute;
+						top: 2.5px; right: 2.5px;
+						width: 50%; height: 50%;
+						background: transparent;
+						border-left: white 5px solid;		
+						border-bottom: white 5px solid;					
+					}
+					.bottom-pane {
+						position: absolute;
+						bottom: 2.5px; left: 2.5px;
+						width: 50%; height: 50%;
+						background: transparent;
+						border-top: white 5px solid;		
+						border-right: white 5px solid;				
+					}
+				
+					.content-pane {
+	
+						position: absolute;
+						top: calc(25% + 5px); left: calc(25% + 5px);
+						width: calc(50% - 10px); 
+						height: calc(50% - 10px); 
+						background: blue;
+						color: white;
+						text-align: center;
+						opacity: 0;
+						
+						.flexslider-skills {
+							position: absolute;
+							top: 0px;
+							background: blue;
+							border: none; 
+							height: 100%;
+							width: 100%;
+							margin: 0px;
+	
+	
+							.flex-direction-nav { 
+								
+								a { height: 80px; top: 40%; }
+								> li {
+								
+								}							
+								.flex-nav-prev { 
+									
+									a:before {
+										content: "\f053";
+										font-family: FontAwesome;
+										color: white;
+										font-size: 0.7em;
+									}
+									a {
+										background: rgba(69, 157, 242, 0.8);									
+									}	
+									.flex-prev { left: -50px; }						
+								}
+								.flex-nav-next { 
+	
+									a:before {
+										content: "\f054";
+										font-family: FontAwesome;
+										color: white;
+										font-size: 0.7em;
+									}
+									a {
+										background: rgba(69, 157, 242, 0.8);									
+									}
+									.flex-next { right: -50px; }
+								}	
+														
+							}
+							
+	
+							.flex-control-nav { bottom: 0; z-index: 3; display: none; }
+							.slides { 
+								position: absolute;
+								background: #FFF;
+								padding-top: 0%;
+								text-align: center;
+								height: 100%; width: 100%;
+								top: 0%;
+								
+								> li { 
+									height: 100%; 
+									
+									.fa-html5, .fa-css3  {
+										transform: translateY(25%);
+	
+										color: black;
+										font-size: 3.5em;									
+									}
+									.fa-css3 {
+										transform: translateY(45%);
+										font-size: 3em;	
+									}							
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+		
+		.fa-chevron-up {
+			position: absolute;
+			left: 50%; bottom: 50px;
+			margin-left: -15px;
+			font-size: 2em !important;
+			color: $white;	
+			cursor: pointer;	
+		}
+			
+		
+		.menu-link {
+			position: absolute;
+			bottom: -30%; left: 50%;
+			margin-left: -7.5px;				
+			font-size: 1em !important;
+			color: #000;	
+			cursor: pointer;
+			
+		}		
+		
+		.tt {
+			bottom: -50%;
+			border-color: #000 transparent transparent transparent;
+		}
+	}
+
+	#left-pane {
+		position: absolute;
+		left: -101%;
+		width: 100%; height: 100%;
+		background-color: #000;
+		
+		.pane-content {
+			background-color: red;
+		}
+		
+		.logo {
+			/* z-index: 100; */
+			position: absolute;
+			top: 40%;
+			/* left: 0px; */
+			width: 40%;
+			height: 20%;
+			/* background-color: rgb(69, 157, 242); */
+			background-color: $black;
+			right: -41%;
+			
+			.triangle {
+					right: -24%;
+					border-color: transparent transparent transparent $black;	
+			}
+				
+		}
+		.fa-chevron-left {
+			position: absolute;
+			right: 15px; top: 50vh;
+			margin-top: -15px;
+			font-size: 2em !important;
+			color: $white;	
+			cursor: pointer;	
+		}
+					
+		.logo-text {
+			position: absolute;
+			right: -30%; top: 50vh;
+			margin-top: -15px;
+			font-size: 1em !important;
+			color: $white;	
+			cursor: pointer;
+			
+		}		
+		.lt {
+			right: -50%;
+			border-color: transparent transparent transparent #000;	
+		}
+	}
+	
+	#bottom-pane {
+		position: absolute;
+		bottom: -101%;
+		width: 100%; height: 100vh;
+		background-color: #000;
+
+		.pane-content {
+			background-color: red;
+		}
+	
+		.fa-chevron-down {
+			position: absolute;
+			left: 50%; top: 60px;
+			margin-left: -15px;
+			font-size: 2em !important;
+			color: $white;	
+			cursor: pointer;	
+		}
+					
+		.menu-link {
+			position: absolute;
+			left: 50%;  top: -30%; 
+			margin-left: -40px;
+			font-size: 1em !important;
+			color: #000;	
+			cursor: pointer;
+			
+		}		
+		.bt {
+			top: -50%;
+			border-color: transparent transparent #000 transparent;
+		}
+	}
+	
+	#right-pane {
+		position: absolute;
+		right: -101%; 
+		width: 100%; height: 100%;
+		background-color: #000;
+
+		.pane-content {
+			
+			.da-slider {
+				top: 10%;
+				min-width: 0px;
+				height: 80%;
+				margin: 0px;
+				background-image:url('../images/backgrounds/stripe_3.png');
+				border-top: none;
+				border-bottom: none;
+				box-shadow: none;	
+				
+				/*
+				
+				border-top: 8px solid #FFFFFF;
+				border-bottom: 8px solid #FFFFFF;
+				*/
+				
+				
+				.da-slide {
+					background: transparent;
+					/*
+						background-image:url('../images/backgrounds/stripe_1.png');
+						background-position: center center;
+						background-repeat: repeat;
+						background-attachment: fixed;
+						background-size: cover;
+						-o-background-size: cover;
+						-moz-background-size: cover;
+						-webkit-background-size:cover;
+					*/
+	
+					h2 {
+						color: white;
+						background: rgba(0, 0, 0, 0.8);
+						top: 10%;
+						font-size: 0.8em;
+						padding-left: 20px;
+					}
+					p { 
+						top: 30%; 
+						padding: 10px; 
+						margin-left: 1em;
+						color: white;
+						background: rgba(0, 0, 0, 0.8);
+
+					}
+					.da-link { 
+						top: 60%; padding: 10px; 
+						border: none; 
+						border-radius: 0px;
+						text-decoration: none; color: $link-color; 
+						background: rgba(0, 0, 0, 0.8);
+
+					}
+					.da-link span { top: 45%; }
+					
+					.da-img {
+						
+						img {
+							
+						}
+					}
+				}
+				.da-arrows {
+					span {
+						width: 70px; height: 70px;
+						background: rgba(69, 157, 242, 0.8);
+						
+					}
+					.da-arrows-prev:before, .da-arrows-next:before { color: white; padding-left: 20px; }
+				}
+				.da-dots span { background: rgb(69, 157, 242); }
+			}
+			
+			.flexslider-project {
+				position: absolute;
+				top: 0px;
+				background: #000;
+				border: none; 
+				height: 100%;
+				width: 100%;
+				margin: 0px;
+				display: none;
+				
+				.flex-direction-nav {
+					margin-top: 150px; 
+				}
+				.flex-direction-nav .flex-nav-prev a:before {
+					content: "\f053";
+					font-family: FontAwesome;
+					color: $black;
+					font-size: 1em;
+				}
+				.flex-direction-nav .flex-nav-next a:before {
+					content: "\f054";
+					font-family: FontAwesome;
+					font-size: 1em;
+				}
+				.flex-direction-nav a { height: 60px; top: 50%; }
+				.flex-control-nav { bottom: 5%; }
+				.slides { 
+				    position: absolute;
+					background: #FFF;
+					padding-top: 5%;
+					text-align: center;
+					height: 80%; width: 100%;
+					top: 10%;
+					
+					> li { height: 100%; }
+					
+					.project-info {
+						position: absolute; 
+						top: 40%; left: 0px;
+						width: 100%;
+						font-size: 0.3em;
+						
+						.flex-title { 
+							color: black;
+							font-weight: bold;
+						 }						
+						.flex-skills{ 
+							color: $black; 
+							
+							.flex-link { text-decoration: none; }
+						}
+
+					}
+					img { position: absolute; width: 200px; left: 50%; margin-left: -100px; }
+				}
+				
+			}
+
+		}
+				
+		.menu-link {
+			position: absolute;
+			left: -30%;  top: 50vh;
+			margin-top: -15px;
+			font-size: 1em !important;
+			color: #000;	
+			cursor: pointer;
+			
+		}		
+
+		.rt {
+			left: -50%;
+			border-color: transparent #000 transparent transparent;
+		}
+	}	
+}

@@ -1,0 +1,120 @@
+		.pane-content {
+			position: relative;
+			.left { left: 0px; }
+			.right { right: 0px; }
+			.skills-wrap {
+				
+				
+				width: 100%; height: 100vh;/* height: 0;height equal to width */
+				 /* padding-bottom: 100%;as above */
+				background: transparent;
+				min-width: 250px;
+				float: left;
+				cursor: pointer;
+				-ms-transform: rotate(45deg); /* IE 9 */
+				-webkit-transform: rotate(45deg); /* Safari */
+				transform: rotate(45deg);
+				
+				
+				.skills-pane-top {
+					position: absolute;
+					top: 2.5px; right: 2.5px;
+					width: 50%; height: 50%;
+					background: transparent;
+					border-left: white 5px solid;		
+					border-bottom: white 5px solid;					
+				}
+				.skills-pane-bottom {
+					position: absolute;
+					bottom: 2.5px; left: 2.5px;
+					width: 50%; height: 50%;
+					background: transparent;
+					border-top: white 5px solid;		
+					border-right: white 5px solid;				
+				}
+				.skills-pane-content {
+
+					position: absolute;
+					top: calc(25% + 5px); left: calc(25% + 5px);
+					width: calc(50% - 10px); 
+					height: calc(50% - 10px); 
+					background: blue;
+					color: white;
+					text-align: center;
+					opacity: 0;
+					
+					.flexslider-skills {
+						position: absolute;
+						top: 0px;
+						background: blue;
+						border: none; 
+						height: 100%;
+						width: 100%;
+						margin: 0px;
+
+
+						.flex-direction-nav { 
+							
+							a { height: 80px; top: 40%; }
+							> li {
+							
+							}							
+							.flex-nav-prev { 
+								
+								a:before {
+									content: "\f053";
+									font-family: FontAwesome;
+									color: white;
+									font-size: 0.7em;
+								}
+								a {
+									background: rgba(69, 157, 242, 0.8);									
+								}	
+								.flex-prev { left: -50px; }						
+							}
+							.flex-nav-next { 
+
+								a:before {
+									content: "\f054";
+									font-family: FontAwesome;
+									color: white;
+									font-size: 0.7em;
+								}
+								a {
+									background: rgba(69, 157, 242, 0.8);									
+								}
+								.flex-next { right: -50px; }
+							}	
+													
+						}
+						
+
+						.flex-control-nav { bottom: 0; z-index: 3; display: none; }
+						.slides { 
+							position: absolute;
+							background: #FFF;
+							padding-top: 0%;
+							text-align: center;
+							height: 100%; width: 100%;
+							top: 0%;
+							
+							> li { height: 100%; 
+								.fa-html5, .fa-css3  {
+  									transform: translateY(25%);
+
+									color: black;
+									font-size: 3.5em;									
+								}
+								.fa-css3 {
+  									transform: translateY(45%);
+									font-size: 3em;	
+								}							
+							}
+							
+
+	
+						}
+						
+					}
+					
+				}

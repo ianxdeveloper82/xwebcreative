@@ -1,0 +1,78 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+
+$alert-yellow:      #ebe16f;
+$alert-red:         #fbe3e4;
+$alert-green:       #e6efc2;
+$alert-blue:        #d5edf8;
+
+$black:             #000;
+$white:             #fff;
+
+$light-blue: 		rgb(69, 157, 242);
+$light-gray:        #f8f9fa;
+$gray:              #eaedf2;
+$text-color:        #5c6b80;
+$meta-gray:         #9fa6b4;
+
+$tan:               #eceee5;
+
+$green:             #7dd667;
+
+$bones-pink:        #f01d4f;
+$blue:              #2980b9;
+
+$link-color:        #000;
+$link-color-hover:        lighten($link-color, 9%);
+
+$email-me-link: #71c496;
+$social-link: #a9948e;
+$social-link-hover: lighten($social-link, 8%);
+$mobile-nav-link: #ffffff;
+$mobile-nav-link-hover: lighten($social-link, 8%);
+$mobile-nav-link-selected: $social-link;
+
+$section-color: #000; /*#202326;*/
+$section-color2: white;
+$border-color:      #ccc;
+$disabled-gray:     #cfcfcf;
+$logo-color: rgba(41, 40, 38, 1);
+$headline-color: rgba(41, 40, 38, 1);
+$triangles-color: rgba(255, 255, 255, 0.8);
+$triangles-color-solid: rgba(255, 255, 255, 1);/*rgba(41, 40, 38, 0.9);rgba(41, 40, 38, 1);*/
+$right-pane-color: rgba(255, 255, 255, 1);/*rgba(41, 40, 38, 1);*/
+
+$maim-menu-color:  rgba(0, 0, 0, 0.5);
+
+$loader-tl-delay: 1500ms; /*3rd*/
+$loader-tr-delay: 500ms; /*1st*/
+$loader-br-delay: 2000ms; /*4th*/
+$loader-bl-delay: 1000ms; /*2nd*/
+
+$loader-bg-duration: 500ms;
+$loader-spinner-duration: 5000ms;
+$loader-animation-duration: 5000ms;
+$loader-opacity-start: 0.5;
+$loader-opacity-end: 1;
+
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/

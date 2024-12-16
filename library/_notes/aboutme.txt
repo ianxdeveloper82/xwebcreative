@@ -1,0 +1,8 @@
+skills: 
+WordPress, WooCommerce, HTML5, 
+CSS3, Responsive Development, jQuery, PHP/MySQL, SASS; 
+
+experience: 3 years+; 
+
+tools: 
+Windows, Dreamweaver, Photoshop, Chrome, Firebug, GitHub; ]

@@ -1,0 +1,91 @@
+/******************************************************************
+Site Name: 
+Author: 
+
+Stylesheet: Super Large Monitor Stylesheet
+
+You can add some advanced styles here if you like. This kicks in
+on larger screens.
+
+******************************************************************/
+header {
+	right: 20px;
+}
+	 
+#content {	 
+
+    /*******************************************************************************************
+     **************************************** HOME *********************************************
+     *******************************************************************************************/
+	 	
+	#home {	
+		height: 150vh;
+		/*background-image:url('../images/backgrounds/pattern3.jpg');*/ 
+		#homeBG { 
+			background-image:url('../images/backgrounds/pattern3-tablet.jpg'); 
+			top: -10%; height: 75%;
+		}		
+		#particles { display: block; position: absolute; width: 100%; height: 100%; top: 0px; }	
+								
+		#homedesign {	
+			top: 60vh;
+					
+			.sq1 { 
+				background-image:url('../images/backgrounds/pattern5.jpg');	
+				/**/							
+			}
+
+			.sq4 {
+				background-image:url('../images/backgrounds/pattern5.jpg');
+			}		
+		}
+	}
+	
+
+	 #contact {
+		 padding: 0 0 100px;
+		 
+		 .contact-wrap {
+		 	h1 { margin: 0 0 1em; }
+		 }
+	}
+
+	 /*#about {
+		 
+		*****************************************************************************************
+         **************************************** about ****************************************
+         *******************************************************************************************/
+		 		
+		#about {
+			
+			.icon {
+				 margin: 2.5% 0px; 
+			}	
+			.txt {
+				padding: 5%;
+				text-align: center;
+			}
+		}
+
+	 /*}  ABOUT */	
+		#server-side-skills {
+			.grid { padding: 10% 0 10%;  }
+		}
+}
+    /*******************************************************************************************
+     *************************************** FOOTER ******************************************
+     *******************************************************************************************/
+	 
+footer {
+
+}
+.error404 {
+	
+	#container {
+		
+		#inner-content {
+			margin-top: 7.5%;
+			
+		}
+	}
+}

@@ -1,0 +1,1817 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Stylesheet
+
+So instead of using the respond.js file to add media query support
+to IE, we're going to use SASS to create an easily readable css file.
+Here, we import all the styles the standard stylesheet gets, only
+without the media queries. No need to worry about editing anything!
+
+******************************************************************/
+/******************************************************************
+IMPORTS & DEPENDENCIES
+Remember, all the BASE styles are called already since IE can
+read those. Below, we need to import only the stuff IE can't
+understand (what's inside the media queries). We also need to
+import the mixins file so SASS can understand the variables.
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+/*#202326;*/
+/*rgba(41, 40, 38, 0.9);rgba(41, 40, 38, 1);*/
+/*rgba(41, 40, 38, 1);*/
+/*3rd*/
+/*1st*/
+/*4th*/
+/*2nd*/
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+/*  
+@font-face {
+      font-family: 'Font Name';
+      src: url('library/fonts/font-name.eot');
+      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+*/
+@font-face {
+  font-family: 'BaronNeue';
+  src: url("../fonts/BaronNeue/BaronNeue.eot");
+  src: url("../fonts/BaronNeue/BaronNeue.eot?#iefix") format("embedded-opentype"), url("../fonts/BaronNeue/BaronNeue.woff") format("woff"), url("../fonts/BaronNeue/BaronNeue.ttf") format("truetype"), url("../fonts/BaronNeue/BaronNeue.svg#font-name") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "icon-font-1";
+  src: url("../fonts/icon-font-1/icon-font-1.eot");
+  src: url("../fonts/icon-font-1/icon-font-1.eot?#iefix") format("embedded-opentype"), url("../fonts/icon-font-1/icon-font-1.woff") format("woff"), url("../fonts/icon-font-1/icon-font-1.ttf") format("truetype"), url("f../fonts/icon-font-1/icon-font-1.svg#icon-font-1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 65, ../scss/partials/_typography.scss */
+[data-icon]:before {
+  font-family: "icon-font-1" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 78, ../scss/partials/_typography.scss */
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "icon-font-1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 91, ../scss/partials/_typography.scss */
+.icon-angle-down:before {
+  content: "\61";
+}
+
+/* line 94, ../scss/partials/_typography.scss */
+.icon-angle-up:before {
+  content: "\62";
+}
+
+/* line 97, ../scss/partials/_typography.scss */
+.icon-angle-right:before {
+  content: "\63";
+}
+
+/* line 100, ../scss/partials/_typography.scss */
+.icon-angle-left:before {
+  content: "\64";
+}
+
+/* line 103, ../scss/partials/_typography.scss */
+.icon-arrow-circle-o-down:before {
+  content: "\65";
+}
+
+/* line 106, ../scss/partials/_typography.scss */
+.icon-arrow-circle-o-up:before {
+  content: "\66";
+}
+
+/* line 109, ../scss/partials/_typography.scss */
+.icon-arrow-up:before {
+  content: "\67";
+}
+
+/* line 112, ../scss/partials/_typography.scss */
+.icon-arrow-right:before {
+  content: "\68";
+}
+
+/* line 115, ../scss/partials/_typography.scss */
+.icon-arrow-left:before {
+  content: "\69";
+}
+
+/* line 118, ../scss/partials/_typography.scss */
+.icon-arrow-down:before {
+  content: "\6a";
+}
+
+/* line 121, ../scss/partials/_typography.scss */
+.icon-arrow-circle-up:before {
+  content: "\6b";
+}
+
+/* line 124, ../scss/partials/_typography.scss */
+.icon-arrow-circle-right:before {
+  content: "\6c";
+}
+
+/* line 127, ../scss/partials/_typography.scss */
+.icon-arrow-circle-o-right:before {
+  content: "\6d";
+}
+
+/* line 130, ../scss/partials/_typography.scss */
+.icon-arrow-circle-o-left:before {
+  content: "\6e";
+}
+
+/* line 133, ../scss/partials/_typography.scss */
+.icon-arrow-circle-left:before {
+  content: "\6f";
+}
+
+/* line 136, ../scss/partials/_typography.scss */
+.icon-arrow-circle-down:before {
+  content: "\70";
+}
+
+/* line 139, ../scss/partials/_typography.scss */
+.icon-behance:before {
+  content: "\71";
+}
+
+/* line 142, ../scss/partials/_typography.scss */
+.icon-chevron-down:before {
+  content: "\72";
+}
+
+/* line 145, ../scss/partials/_typography.scss */
+.icon-chevron-left:before {
+  content: "\73";
+}
+
+/* line 148, ../scss/partials/_typography.scss */
+.icon-chevron-right:before {
+  content: "\74";
+}
+
+/* line 151, ../scss/partials/_typography.scss */
+.icon-chevron-up:before {
+  content: "\75";
+}
+
+/* line 154, ../scss/partials/_typography.scss */
+.icon-css3:before {
+  content: "\76";
+}
+
+/* line 157, ../scss/partials/_typography.scss */
+.icon-dribbble:before {
+  content: "\77";
+}
+
+/* line 160, ../scss/partials/_typography.scss */
+.icon-git:before {
+  content: "\78";
+}
+
+/* line 163, ../scss/partials/_typography.scss */
+.icon-git-square:before {
+  content: "\79";
+}
+
+/* line 166, ../scss/partials/_typography.scss */
+.icon-google-plus:before {
+  content: "\7a";
+}
+
+/* line 169, ../scss/partials/_typography.scss */
+.icon-github:before {
+  content: "\41";
+}
+
+/* line 172, ../scss/partials/_typography.scss */
+.icon-github-alt:before {
+  content: "\42";
+}
+
+/* line 175, ../scss/partials/_typography.scss */
+.icon-github-square:before {
+  content: "\43";
+}
+
+/* line 178, ../scss/partials/_typography.scss */
+.icon-html5:before {
+  content: "\44";
+}
+
+/* line 181, ../scss/partials/_typography.scss */
+.icon-linkedin:before {
+  content: "\45";
+}
+
+/* line 184, ../scss/partials/_typography.scss */
+.icon-linkedin-square:before {
+  content: "\46";
+}
+
+/* line 187, ../scss/partials/_typography.scss */
+.icon-facebook:before {
+  content: "\47";
+}
+
+/* line 190, ../scss/partials/_typography.scss */
+.icon-facebook-official:before {
+  content: "\48";
+}
+
+/* line 193, ../scss/partials/_typography.scss */
+.icon-facebook-square:before {
+  content: "\49";
+}
+
+/* line 196, ../scss/partials/_typography.scss */
+.icon-wordpress:before {
+  content: "\4a";
+}
+
+/* line 199, ../scss/partials/_typography.scss */
+.icon-ai:before {
+  content: "\4b";
+}
+
+/* line 202, ../scss/partials/_typography.scss */
+.icon-css3-1:before {
+  content: "\4c";
+}
+
+/* line 205, ../scss/partials/_typography.scss */
+.icon-dw:before {
+  content: "\4d";
+}
+
+/* line 208, ../scss/partials/_typography.scss */
+.icon-git-1:before {
+  content: "\4e";
+}
+
+/* line 211, ../scss/partials/_typography.scss */
+.icon-html5-1:before {
+  content: "\4f";
+}
+
+/* line 214, ../scss/partials/_typography.scss */
+.icon-jquery:before {
+  content: "\50";
+}
+
+/* line 217, ../scss/partials/_typography.scss */
+.icon-mysql:before {
+  content: "\51";
+}
+
+/* line 220, ../scss/partials/_typography.scss */
+.icon-php:before {
+  content: "\52";
+}
+
+/* line 223, ../scss/partials/_typography.scss */
+.icon-ps:before {
+  content: "\53";
+}
+
+/* line 226, ../scss/partials/_typography.scss */
+.icon-share:before {
+  content: "\55";
+}
+
+/* line 229, ../scss/partials/_typography.scss */
+.icon-share-outline:before {
+  content: "\56";
+}
+
+/* line 232, ../scss/partials/_typography.scss */
+.icon-share-1:before {
+  content: "\57";
+}
+
+/* line 235, ../scss/partials/_typography.scss */
+.icon-share-alt:before {
+  content: "\58";
+}
+
+/* line 238, ../scss/partials/_typography.scss */
+.icon-share-alt-square:before {
+  content: "\59";
+}
+
+/* line 241, ../scss/partials/_typography.scss */
+.icon-bars:before {
+  content: "\5a";
+}
+
+/* line 244, ../scss/partials/_typography.scss */
+.icon-list:before {
+  content: "\30";
+}
+
+/* line 247, ../scss/partials/_typography.scss */
+.icon-menu:before {
+  content: "\31";
+}
+
+/* line 250, ../scss/partials/_typography.scss */
+.icon-align-justify:before {
+  content: "\32";
+}
+
+/* line 253, ../scss/partials/_typography.scss */
+.icon-sass:before {
+  content: "\33";
+}
+
+/* line 256, ../scss/partials/_typography.scss */
+.icon-map-marker:before {
+  content: "\54";
+}
+
+/* line 259, ../scss/partials/_typography.scss */
+.icon-times:before {
+  content: "\34";
+}
+
+/* line 262, ../scss/partials/_typography.scss */
+.icon-times-circle-o:before {
+  content: "\36";
+}
+
+/* line 265, ../scss/partials/_typography.scss */
+.icon-cancel:before {
+  content: "\37";
+}
+
+/* line 268, ../scss/partials/_typography.scss */
+.icon-times-circle:before {
+  content: "\35";
+}
+
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+/*
+ i imported this one in the functions file so bones would look sweet.
+ don't forget to remove it for your site.
+*/
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+/* line 293, ../scss/partials/_typography.scss */
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  -webkit-hyphenate-before: 2;
+  -webkit-hyphenate-after: 3;
+  hyphenate-lines: 3;
+  -webkit-font-feature-settings: "liga", "dlig";
+  -moz-font-feature-settings: "liga=1, dlig=1";
+  -ms-font-feature-settings: "liga", "dlig";
+  -o-font-feature-settings: "liga", "dlig";
+  font-feature-settings: "liga", "dlig";
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Mixins Stylesheet
+
+This is where you can take advantage of Sass' great features: Mixins.
+I won't go in-depth on how they work exactly,
+there are a few articles below that will help do that. What I will
+tell you is that this will help speed up simple changes like
+changing a color or adding CSS3 techniques gradients.
+
+A WORD OF WARNING: It's very easy to overdo it here. Be careful and
+remember less is more.
+
+Helpful:
+http://sachagreif.com/useful-sass-mixins/
+http://thesassway.com/intermediate/leveraging-sass-mixins-for-cleaner-code
+http://web-design-weekly.com/blog/2013/05/12/handy-sass-mixins/
+
+******************************************************************/
+/*********************
+BOX SIZING
+*********************/
+/*********************
+TRANSFORM
+*********************/
+/*********************
+TRANSITION
+*********************/
+/*
+I totally rewrote this to be cleaner and easier to use.
+You'll need to be using Sass 3.2+ for these to work.
+Thanks to @anthonyshort for the inspiration on these.
+USAGE: @include transition(all 0.2s ease-in-out);
+*/
+/*********************
+CSS3 GRADIENTS
+Be careful with these since they can
+really slow down your CSS. Don't overdo it.
+*********************/
+/* @include css-gradient(#dfdfdf,#f8f8f8); */
+/*********************
+BOX SIZING
+*********************/
+/* @include box-sizing(border-box); */
+/* NOTE: value of "padding-box" is only supported in Gecko. So
+probably best not to use it. I mean, were you going to anyway? */
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: IE Grid Styles
+
+Since the example grid is based on media queries, so rather than
+setup some js library that would make IE8 and below understand
+media queries, let's just add some styles that serves a fixed grid.
+
+Again, if you want to roll your own, just remove this junk and put
+whatever you use in here.
+
+******************************************************************/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: 481px and Up Stylesheet
+
+This stylesheet is loaded for larger devices. It's set to
+481px because at 480px it would load on a landscaped iPhone.
+This isn't ideal because then you would be loading all those
+extra styles on that same mobile connection.
+
+A word of warning. This size COULD be a larger mobile device,
+so you still want to keep it pretty light and simply expand
+upon your base.scss styles.
+
+******************************************************************/
+/*
+IMPORTANT NOTE ABOUT SASS 3.3 & UP
+You can't use @extend within media queries
+anymore, so just be aware that if you drop
+them in here, they won't work.
+*/
+/*********************
+NAVIGATION STYLES
+*********************/
+/* line 29, ../scss/breakpoints/_481up.scss */
+#mobile-header .icon-menu {
+  top: 100%;
+}
+
+/*******************************************************************************************
+ ************************************ CONTENT STYLES ***************************************
+ *******************************************************************************************/
+/* line 36, ../scss/breakpoints/_481up.scss */
+#content {
+  /*******************************************************************************************
+   **************************************** HOME *********************************************
+   *******************************************************************************************/
+  /*******************************************************************************************
+   *************************************** CONTACT ******************************************
+   *******************************************************************************************/
+  /*******************************************************************************************
+   **************************************** ABOUT ********************************************
+   *******************************************************************************************/
+  	 /*#about {
+  
+  		******************************************************************************************
+           **************************************** about ****************************************
+           *******************************************************************************************/
+  		/*******************************************************************************************
+           ***************************************** SERVICES ****************************************
+           *******************************************************************************************/
+  		/*******************************************************************************************
+           ******************************************** TOOLS ****************************************
+           *******************************************************************************************/
+  		/*******************************************************************************************
+           ************************************** CLIENT-SIDE SKILLS ***********************************
+           *******************************************************************************************/
+  		/*******************************************************************************************
+           ************************************** SERVER-SIDE SKILLS ************************************
+           *******************************************************************************************/
+  /* }  ABOUT */
+  /*******************************************************************************************
+   **************************************** WORK *********************************************
+   *******************************************************************************************/
+}
+/* line 41, ../scss/breakpoints/_481up.scss */
+#content #home {
+  height: 100vh;
+}
+/* line 43, ../scss/breakpoints/_481up.scss */
+#content #home #homeBG {
+  top: -15%;
+}
+/* line 44, ../scss/breakpoints/_481up.scss */
+#content #home #logo {
+  width: 80%;
+  left: 10%;
+}
+/* line 86, ../scss/breakpoints/_481up.scss */
+#content #services .grid .col {
+  padding-top: 50%;
+  margin-bottom: 10%;
+}
+/* line 97, ../scss/breakpoints/_481up.scss */
+#content #tools {
+  padding: 30% 0 10%;
+}
+/* line 104, ../scss/breakpoints/_481up.scss */
+#content #tools .grid .col {
+  padding-top: 50%;
+}
+/* line 117, ../scss/breakpoints/_481up.scss */
+#content #client-side-skills .title {
+  margin-top: 30%;
+}
+/* line 126, ../scss/breakpoints/_481up.scss */
+#content #server-side-skills {
+  padding: 10% 0% 0%;
+  margin: 0;
+}
+/* line 130, ../scss/breakpoints/_481up.scss */
+#content #server-side-skills .grid {
+  padding: 25% 0 25%;
+}
+/* line 132, ../scss/breakpoints/_481up.scss */
+#content #server-side-skills .grid .col {
+  padding: 50% 0 0 0;
+}
+/* line 136, ../scss/breakpoints/_481up.scss */
+#content #server-side-skills #tslope, #content #server-side-skills #bslope {
+  display: none;
+}
+/* line 137, ../scss/breakpoints/_481up.scss */
+#content #server-side-skills .tt1, #content #server-side-skills .bt1, #content #server-side-skills .tt2, #content #server-side-skills .bt2 {
+  display: block;
+}
+/* line 140, ../scss/breakpoints/_481up.scss */
+#content #server-side-skills .tt1, #content #server-side-skills .bt1 {
+  left: 0%;
+}
+/* line 143, ../scss/breakpoints/_481up.scss */
+#content #server-side-skills .tt2, #content #server-side-skills .bt2 {
+  left: 45%;
+}
+/* line 147, ../scss/breakpoints/_481up.scss */
+#content #server-side-skills .tt1, #content #server-side-skills .tt2 {
+  top: 0px;
+  border-color: white transparent transparent transparent;
+}
+/* line 151, ../scss/breakpoints/_481up.scss */
+#content #server-side-skills .bt1, #content #server-side-skills .bt2 {
+  bottom: 0px;
+  border-color: transparent transparent white transparent;
+}
+/* line 164, ../scss/breakpoints/_481up.scss */
+#content #work {
+  margin: 0;
+}
+/* line 173, ../scss/breakpoints/_481up.scss */
+#content #work .project-wrap .project {
+  height: 50vh;
+}
+
+/* CONTENT */
+/*******************************************************************************************
+ ************************************ MEDIA QUERIES ****************************************
+ ******************************************************************************************
+	 
+
+@media only screen 
+  and (min-device-width: 481px) 
+  and (max-device-width: 767px)
+  and (orientation: landscape) {
+*/
+    /*******************************************************************************************
+     ************************************ CONTENT STYLES ***************************************
+     ******************************************************************************************
+	 
+	#content {	
+	*/
+	/*******************************************************************************************
+	 **************************************** HOME *********************************************
+	 ******************************************************************************************
+		
+	#home {	
+					
+		#logo {
+				width: 60%;
+				left: 20%;
+		}	
+		
+
+
+	}
+*/
+	/*******************************************************************************************
+	 *************************************** CONTACT ******************************************
+	 ******************************************************************************************
+	 
+	#contact {
+		height: 100vh;
+
+		.contact-wrap {
+			top: 20px;		
+		}
+	}	
+*/
+/*******************************************************************************************
+ **************************************** ABOUT ********************************************
+ *******************************************************************************************/
+	/*#about {
+		
+		******************************************************************************************
+		 **************************************** about ****************************************
+		 ******************************************************************************************
+		 
+		#about {
+
+			.title { 
+				margin-top: 15%;
+			}	
+		}*/
+/*******************************************************************************************
+ ***************************************** SERVICES ****************************************
+ ******************************************************************************************
+ 
+#services {
+	
+	.title { 
+		margin-top: 10%;
+		margin-bottom: 10%;
+	}	
+				
+	.grid {
+		
+		.col {
+			padding-top: 50%;
+			margin-bottom: 10%;
+		}
+	}			
+}*/
+		/*******************************************************************************************
+		 **************************************** TOOLS ********************************************
+		 ******************************************************************************************
+		 
+		#tools {
+			padding: 10% 0% 20%;
+
+			.title { 
+				margin-top: 20%;
+			}
+				
+			.grid {		
+				
+				.col {
+					padding-top: 50%;
+					margin-bottom: 15%;
+				}
+			}
+					
+		}	
+		*/
+		/*******************************************************************************************
+		 ************************************** CLIENT-SIDE SKILLS ***********************************
+		 ******************************************************************************************
+		 
+		#client-side-skills {
+
+			.title { 
+				margin-top: 25%;
+				margin-bottom: 10%;
+			}	
+			.backend-title { 
+				background: $section-color;
+				color: $section-color2;
+			}
+		}	
+*/
+		/*******************************************************************************************
+		 ************************************** SERVER-SIDE SKILLS ************************************
+		 ******************************************************************************************
+		 
+		#server-side-skills {
+			padding: 20% 0% 20%;
+
+			.grid {
+				
+				.col {
+					padding-top:50%;
+
+					.l { left: -5%; }
+				}	
+			}
+		}*/
+/*}  ABOUT */
+		/*******************************************************************************************
+		 **************************************** WORK *********************************************
+		 ******************************************************************************************	
+		
+		#work {
+			
+			.title { 
+
+			}
+		}
+			
+
+	} /* CONTENT 
+}
+
+
+@media only screen and (min-device-width: 600px) {
+
+	#content {*/
+			/*******************************************************************************************
+			 **************************************** HOME *********************************************
+			 ******************************************************************************************
+				
+			#home {	
+							
+				#logo {
+						width: 60%;
+						left: 20%;
+						
+					.image {
+						width: 25%; height: 100%;
+						float: left;
+						@include image(contain, no-repeat, center center);
+						background-image:url('../images/logo1.svg'); 
+					}
+					.txt {
+						width: 75%;
+						float: left;
+						
+						.name {
+							float: left;
+							font-size: 2.5em;						
+						}	
+						.slogan { float: right; font-size: 1em; letter-spacing: 0.5em; }	
+					}
+				}	
+			}
+	}
+}
+
+*/
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Tablet & Small Desktop Stylesheet
+
+Here's where you can start getting into the good stuff.
+This size will work on iPads, other tablets, and desktops.
+So you can start working with more styles, background images,
+and other resources. You'll also notice the grid starts to
+come into play. Have fun!
+
+******************************************************************/
+/*********************
+GENERAL STYLES
+*********************/
+/* line 26, ../scss/breakpoints/_768up.scss */
+h1, .h1 {
+  font-size: 2.2em;
+  /* 2.5x body copy size = 40px 
+  line-height: 1.125;*/
+}
+
+/* line 31, ../scss/breakpoints/_768up.scss */
+h2, .h2 {
+  font-size: 1.7em;
+  /* 2x body copy size = 32px */
+  line-height: 1.25;
+}
+
+/* line 36, ../scss/breakpoints/_768up.scss */
+h3, .h3 {
+  font-size: 1.3em;
+  /* 1.5x body copy size = 24px */
+  line-height: 1.25;
+}
+
+/* line 41, ../scss/breakpoints/_768up.scss */
+h4, .h4 {
+  line-height: 1.2;
+  /* (22px / 18px */
+}
+
+/* line 47, ../scss/breakpoints/_768up.scss */
+p {
+  font-size: 1.5em;
+  line-height: 1.5em;
+}
+
+/*********************
+LAYOUT & GRID STYLES
+*********************/
+/* line 53, ../scss/breakpoints/_768up.scss */
+.wrap {
+  width: 760px;
+}
+
+/*********************
+LOADER
+*********************/
+/* line 59, ../scss/breakpoints/_768up.scss */
+.loadcenter_wrap p {
+  font-size: 1em;
+}
+
+/* line 62, ../scss/breakpoints/_768up.scss */
+.loadcenter {
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+/*********************
+HEADER STYLES
+*********************/
+/* line 70, ../scss/breakpoints/_768up.scss */
+#mobile-header .icon-menu {
+  top: 105%;
+}
+
+/*******************************************************************************************
+ ************************************ CONTENT STYLES ***************************************
+ *******************************************************************************************/
+/* line 78, ../scss/breakpoints/_768up.scss */
+#content {
+  /*******************************************************************************************
+   *********************************** FADE IN / OUT OVERLAYS ********************************
+   *******************************************************************************************/
+  /*******************************************************************************************
+   **************************************** HOME *********************************************
+   *******************************************************************************************/
+  /*******************************************************************************************
+   *************************************** CONTACT ******************************************
+   *******************************************************************************************/
+  /*******************************************************************************************
+   **************************************** LOCATION *****************************************
+   *******************************************************************************************/
+  /*******************************************************************************************
+   **************************************** ABOUT ********************************************
+   *******************************************************************************************/
+  	/* #about {
+  		 
+  		******************************************************************************************
+           **************************************** about ****************************************
+           *******************************************************************************************/
+  		/*******************************************************************************************
+           ***************************************** SERVICES ****************************************
+           *******************************************************************************************/
+  		/*******************************************************************************************
+           **************************************** TOOLS ********************************************
+           *******************************************************************************************/
+  		/*******************************************************************************************
+           ************************************** CLIENT-SIDE SKILLS ***********************************
+           *******************************************************************************************/
+  		/*******************************************************************************************
+           ************************************** SERVER-SIDE SKILLS ************************************
+           *******************************************************************************************/
+  /*} ABOUT*/
+  /*******************************************************************************************
+   **************************************** WORK *********************************************
+   *******************************************************************************************/
+}
+/* line 79, ../scss/breakpoints/_768up.scss */
+#content .title {
+  width: 50%;
+  margin: 0px 25% 50px;
+}
+/* line 83, ../scss/breakpoints/_768up.scss */
+#content .divider {
+  border-bottom: #000 dashed 3px;
+}
+/* line 89, ../scss/breakpoints/_768up.scss */
+#content .topfadein {
+  top: 0;
+}
+/* line 90, ../scss/breakpoints/_768up.scss */
+#content .bottomfadein {
+  bottom: 0;
+}
+/* line 91, ../scss/breakpoints/_768up.scss */
+#content .topfadeout {
+  top: 0;
+}
+/* line 92, ../scss/breakpoints/_768up.scss */
+#content .bottomfadeout {
+  bottom: -1px;
+}
+/* line 99, ../scss/breakpoints/_768up.scss */
+#content #home #homeBG {
+  background-image: url("../images/backgrounds/pattern3-tablet.jpg");
+}
+/* line 103, ../scss/breakpoints/_768up.scss */
+#content #home #logo {
+  width: 70%;
+  height: 200px;
+  left: 15%;
+}
+/* line 107, ../scss/breakpoints/_768up.scss */
+#content #home #logo .image {
+  width: 30%;
+  height: 100%;
+  float: left;
+}
+/* line 111, ../scss/breakpoints/_768up.scss */
+#content #home #logo .txt {
+  width: 65%;
+  float: left;
+}
+/* line 115, ../scss/breakpoints/_768up.scss */
+#content #home #logo .txt .name {
+  float: left;
+  font-size: 4em;
+}
+/* line 119, ../scss/breakpoints/_768up.scss */
+#content #home #logo .txt .slogan {
+  float: right;
+  font-size: 1.5em;
+  letter-spacing: 0.5em;
+}
+/* line 125, ../scss/breakpoints/_768up.scss */
+#content #home #homedesign .sq1 {
+  background-image: url("../images/backgrounds/pattern5-tablet.jpg");
+  /**/
+}
+/* line 130, ../scss/breakpoints/_768up.scss */
+#content #home #homedesign .sq4 {
+  background-image: url("../images/backgrounds/pattern5-tablet.jpg");
+}
+/* line 140, ../scss/breakpoints/_768up.scss */
+#content #contact {
+  padding: 0 0 100px;
+}
+/* line 145, ../scss/breakpoints/_768up.scss */
+#content #contact .contact-wrap .email-wrap {
+  padding: 30px 0px 30px;
+}
+/* line 148, ../scss/breakpoints/_768up.scss */
+#content #contact .contact-wrap .email-wrap a {
+  font-size: 2em;
+}
+/* line 155, ../scss/breakpoints/_768up.scss */
+#content #contact .contact-wrap .social-wrap li {
+  display: inline-block;
+  margin: 2%;
+}
+/* line 156, ../scss/breakpoints/_768up.scss */
+#content #contact .contact-wrap .social-wrap li a {
+  font-size: 5em;
+}
+/* line 178, ../scss/breakpoints/_768up.scss */
+#content #about {
+  padding: 25% 0;
+}
+/* line 182, ../scss/breakpoints/_768up.scss */
+#content #about .title {
+  /*margin-top: 10%;*/
+}
+/* line 186, ../scss/breakpoints/_768up.scss */
+#content #about .icon-wordpress {
+  font-size: 15em;
+}
+/* line 198, ../scss/breakpoints/_768up.scss */
+#content #services .title {
+  margin-bottom: 100px;
+}
+/* line 208, ../scss/breakpoints/_768up.scss */
+#content #services .tt {
+  top: -100px;
+}
+/* line 211, ../scss/breakpoints/_768up.scss */
+#content #services .bt {
+  bottom: -100px;
+}
+/* line 220, ../scss/breakpoints/_768up.scss */
+#content #tools {
+  padding: 20% 0% 50px;
+}
+/* line 241, ../scss/breakpoints/_768up.scss */
+#content #client-side-skills .title {
+  margin-top: 150px;
+}
+/* line 245, ../scss/breakpoints/_768up.scss */
+#content #client-side-skills .bt {
+  bottom: -100px;
+}
+/* line 257, ../scss/breakpoints/_768up.scss */
+#content #server-side-skills .title {
+  margin: 0 25% 50px;
+  background: #000;
+  color: white;
+}
+/* line 269, ../scss/breakpoints/_768up.scss */
+#content #server-side-skills .bt1, #content #server-side-skills .bt2 {
+  bottom: 0px;
+}
+/* line 280, ../scss/breakpoints/_768up.scss */
+#content #work {
+  margin: 0;
+}
+/* line 283, ../scss/breakpoints/_768up.scss */
+#content #work .title {
+  margin: 30% 25% 0;
+}
+
+/* CONTENT */
+/*********************
+FOOTER STYLES
+*********************/
+/*
+you'll probably need to do quite a bit
+of overriding here if you styled them for
+mobile. Make sure to double check these!
+*/
+/* line 309, ../scss/breakpoints/_768up.scss */
+.footer {
+  font-size: 1.5em;
+}
+
+/* line 321, ../scss/breakpoints/_768up.scss */
+.error404 #container #inner-content #logo img {
+  width: 40%;
+}
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Desktop Stylsheet
+
+This is the desktop size. It's larger than an iPad so it will only
+be seen on the Desktop.
+
+******************************************************************/
+/* line 16, ../scss/breakpoints/_1030up.scss */
+h1, .h1 {
+  font-size: 2.5em;
+  /* 3x body copy size = 48px 
+  line-height: 1.05;*/
+  /* keep to a multiple of the 20px line height 
+  and something more appropriate for display headings */
+}
+
+/* line 24, ../scss/breakpoints/_1030up.scss */
+h2, .h2 {
+  font-size: 2em;
+  /* 2.25x body copy size = 36px */
+  line-height: 1.25;
+}
+
+/* line 29, ../scss/breakpoints/_1030up.scss */
+h3, .h3 {
+  font-size: 1.7em;
+  /* 1.75x body copy size = 28px */
+  line-height: 1.25;
+}
+
+/*********************
+HEADER STYLES
+*********************/
+/* line 39, ../scss/breakpoints/_1030up.scss */
+#mobile-header .icon-menu {
+  top: 105%;
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(0.1, 0.1);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1.0;
+  }
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 0.0;
+  }
+}
+@-webkit-keyframes beat {
+  0% {
+    -webkit-transform: scale(1, 1);
+  }
+  80% {
+    -webkit-transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(2, 2);
+  }
+}
+@-moz-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(0.1, 0.1);
+    opacity: 0.0;
+  }
+  50% {
+    opacity: 1.0;
+  }
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 0.0;
+  }
+}
+@-moz-keyframes beat {
+  0% {
+    -webkit-transform: scale(1, 1);
+  }
+  80% {
+    -webkit-transform: scale(1, 1);
+  }
+  100% {
+    -webkit-transform: scale(2, 2);
+  }
+}
+/* line 63, ../scss/breakpoints/_1030up.scss */
+header {
+  position: fixed;
+  background-color: transparent;
+  height: 100%;
+  right: 20px;
+  display: block;
+  z-index: 100;
+  /* nav */
+}
+/* line 72, ../scss/breakpoints/_1030up.scss */
+header .nav {
+  visibility: inherit;
+  height: 100%;
+  display: block;
+  /* menu-holder  */
+}
+/* line 77, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  float: right;
+  /* list */
+}
+/* line 83, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list {
+  width: 100%;
+  height: 75%;
+  position: absolute;
+  top: 12.5%;
+  /* menu-item */
+  /**/
+  /* selected */
+}
+/* line 89, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list #line, header .nav .menu-holder .list #track {
+  position: absolute;
+  height: 95%;
+  width: 4%;
+  background-color: #000;
+  top: 2.5%;
+  left: 48%;
+  opacity: 0.1;
+}
+/* line 95, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list #track {
+  width: 100%;
+  background-color: transparent;
+  opacity: 1;
+}
+/* line 100, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list #track #ball {
+  position: absolute;
+  top: 0px;
+  left: -11%;
+  background-color: #000;
+  border: 1px solid #000;
+  -webkit-border-radius: 50%;
+}
+/* line 110, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .menu-item, header .nav .menu-holder .list .space {
+  position: relative;
+  float: right;
+  /*width: 300px;*/
+  height: 6.666%;
+  cursor: pointer;
+}
+/* line 119, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .menu-item .icon-holder, header .nav .menu-holder .list .space .icon-holder {
+  position: relative;
+  float: right;
+  height: 100%;
+}
+/* line 124, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .menu-item .icon-holder .in, header .nav .menu-holder .list .space .icon-holder .in {
+  visibility: inherit;
+  -ms-filter: "alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  opacity: 0.7;
+  transition: opacity 0.5s ease-in-out;
+  position: absolute;
+  left: 37.5%;
+  top: 37.5%;
+  width: 25%;
+  height: 25%;
+  background-color: #000;
+  border: 1px solid #000;
+  -webkit-border-radius: 50%;
+}
+/* line 141, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .menu-item .icon-holder .out, header .nav .menu-holder .list .space .icon-holder .out {
+  -ms-filter: "alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 5px solid #000;
+  -webkit-border-radius: 50%;
+}
+/* line 157, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .menu-item p, header .nav .menu-holder .list .space p {
+  position: relative;
+  float: right;
+  width: 0px;
+  /**/
+  height: 100%;
+  letter-spacing: .15em;
+  font-size: 100%;
+  font-weight: bold;
+  padding-right: 15px;
+  padding-top: 2px;
+  margin: 0;
+  text-align: right;
+  color: black;
+  text-transform: uppercase;
+  -ms-filter: "alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  visibility: visible;
+}
+/* line 176, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .menu-item p span, header .nav .menu-holder .list .space p span {
+  -ms-filter: "alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0.3;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+/* line 185, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .menu-item .icon-holder:hover, header .nav .menu-holder .list .space .icon-holder:hover {
+  cursor: pointer;
+}
+/* line 187, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .menu-item .icon-holder:hover .in, header .nav .menu-holder .list .space .icon-holder:hover .in {
+  -ms-filter: "alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+/* line 193, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .menu-item .icon-holder:hover + p, header .nav .menu-holder .list .space .icon-holder:hover + p {
+  width: 250px;
+  visibility: visible;
+  -ms-filter: "alpha(Opacity=1)";
+  filter: alpha(opacity=1);
+  opacity: 1;
+}
+/* line 201, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .menu-item .icon-holder:hover + p span, header .nav .menu-holder .list .space .icon-holder:hover + p span {
+  width: 100%;
+  padding: 1em;
+  visibility: inherit;
+  -ms-filter: "alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+  background: #000;
+  color: #fff;
+}
+/* line 213, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .menu-item:hover, header .nav .menu-holder .list .space:hover {
+  width: 300px !important;
+}
+/* line 214, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .selected {
+  cursor: default;
+  width: 300px !important;
+}
+/* line 219, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .selected .icon-holder .in {
+  opacity: 1;
+  -webkit-animation: beat 2s linear 1.5s infinite;
+  -moz-animation: beat 2s linear 1.5s infinite;
+}
+/* line 223, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .selected .icon-holder .out {
+  display: inline;
+  visibility: inherit;
+  -ms-filter: "alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+  -webkit-animation: pulsate 2s ease-out infinite;
+  -moz-animation: pulsate 2s ease-out infinite;
+}
+/* line 234, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .selected p {
+  width: 250px;
+  visibility: visible;
+  -ms-filter: "alpha(Opacity=1)";
+  filter: alpha(opacity=1);
+  opacity: 1;
+}
+/* line 242, ../scss/breakpoints/_1030up.scss */
+header .nav .menu-holder .list .selected p span {
+  width: 100%;
+  padding: 1em;
+  visibility: inherit;
+  -ms-filter: "alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+  background: #000;
+  color: #fff;
+}
+
+/* desktop-header */
+/*******************************************************************************************
+ ************************************ CONTENT STYLES ***************************************
+ *******************************************************************************************/
+/* line 262, ../scss/breakpoints/_1030up.scss */
+#content {
+    /*******************************************************************************************
+     **************************************** HOME *********************************************
+     ******************************************************************************************
+	.homeDesktop {
+		height: 125vh !important;
+	}	*/
+  /*******************************************************************************************
+   *************************************** CONTACT ******************************************
+   *******************************************************************************************/
+  /*******************************************************************************************
+   **************************************** LOCATION *****************************************
+   *******************************************************************************************/
+  	/******************************************************************************************
+           **************************************** about ****************************************
+           *******************************************************************************************/
+  /*}  ABOUT */
+  /*******************************************************************************************
+   **************************************** WORK *********************************************
+   *******************************************************************************************/
+  /* WORK */
+}
+/* line 270, ../scss/breakpoints/_1030up.scss */
+#content #home {
+  height: 100vh;
+}
+/* line 273, ../scss/breakpoints/_1030up.scss */
+#content #home #homeBG {
+  top: -15%;
+  background-image: url("../images/backgrounds/pattern3-tablet.jpg");
+}
+/* line 277, ../scss/breakpoints/_1030up.scss */
+#content #home #logo {
+  width: 50%;
+  left: 25%;
+}
+/* line 282, ../scss/breakpoints/_1030up.scss */
+#content #home #homedesign {
+  top: 50vh;
+}
+/* line 293, ../scss/breakpoints/_1030up.scss */
+#content #contact {
+  padding: 10% 0 100px;
+}
+/* line 295, ../scss/breakpoints/_1030up.scss */
+#content #contact .bt {
+  display: block;
+  bottom: -100px;
+  border-color: white transparent transparent transparent;
+}
+/* line 307, ../scss/breakpoints/_1030up.scss */
+#content #location {
+  display: block;
+  height: 100vh;
+  /**/
+  background-repeat: no-repeat;
+  background-position: center center;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  -moz-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-image: url("../images/backgrounds/bournemouth-map.png");
+}
+/* line 314, ../scss/breakpoints/_1030up.scss */
+#content #location #map-canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+/* line 315, ../scss/breakpoints/_1030up.scss */
+#content #location #map-nav {
+  opacity: 1;
+  display: block;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  -ms-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/* line 321, ../scss/breakpoints/_1030up.scss */
+#content #location #map-nav .map {
+  left: 0;
+  top: 0;
+  background-color: #7e7c78;
+}
+/* line 324, ../scss/breakpoints/_1030up.scss */
+#content #location #map-nav .map a {
+  left: 12.5px;
+  top: 12.5px;
+}
+/* line 326, ../scss/breakpoints/_1030up.scss */
+#content #location #map-nav .in {
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+/* line 327, ../scss/breakpoints/_1030up.scss */
+#content #location #map-nav .in a {
+  left: 22.5px;
+  top: 12.5px;
+}
+/* line 329, ../scss/breakpoints/_1030up.scss */
+#content #location #map-nav .in .left-strip {
+  position: absolute;
+  left: -6%;
+  height: 100%;
+  width: 10%;
+  transform: rotate(-5deg);
+  background-color: black;
+}
+/* line 333, ../scss/breakpoints/_1030up.scss */
+#content #location #map-nav .in .right-strip {
+  position: absolute;
+  bottom: -6%;
+  height: 10%;
+  width: 100%;
+  transform: rotate(5deg);
+  background-color: black;
+}
+/* line 339, ../scss/breakpoints/_1030up.scss */
+#content #location #map-nav .out {
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+/* line 340, ../scss/breakpoints/_1030up.scss */
+#content #location #map-nav .out a {
+  left: 22.5px;
+  top: 12.5px;
+}
+/* line 342, ../scss/breakpoints/_1030up.scss */
+#content #location #map-nav .out .left-strip {
+  position: absolute;
+  top: -6%;
+  height: 10%;
+  width: 100%;
+  transform: rotate(5deg);
+  background-color: black;
+}
+/* line 345, ../scss/breakpoints/_1030up.scss */
+#content #location #map-nav .out .right-strip {
+  position: absolute;
+  right: -6%;
+  height: 100%;
+  width: 10%;
+  transform: rotate(-5deg);
+  background-color: black;
+}
+/* line 350, ../scss/breakpoints/_1030up.scss */
+#content #location #map-nav .sat {
+  bottom: 0;
+  right: 0;
+}
+/* line 353, ../scss/breakpoints/_1030up.scss */
+#content #location #map-nav .sat a {
+  left: 12.5px;
+  top: 12.5px;
+}
+/* line 356, ../scss/breakpoints/_1030up.scss */
+#content #location #map-nav div {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  text-align: center;
+  background-color: white;
+  color: black;
+}
+/* line 360, ../scss/breakpoints/_1030up.scss */
+#content #location #map-nav div a {
+  position: absolute;
+  outline: none;
+  display: inline-block;
+  -ms-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+/* line 372, ../scss/breakpoints/_1030up.scss */
+#content #about {
+  padding: 5% 0 100px 0;
+}
+/* line 378, ../scss/breakpoints/_1030up.scss */
+#content #about .icon-wordpress {
+  font-size: 15em;
+}
+/* line 381, ../scss/breakpoints/_1030up.scss */
+#content #about .ttl {
+  display: block;
+  top: -100px;
+  border-color: transparent transparent transparent #000;
+}
+/* line 387, ../scss/breakpoints/_1030up.scss */
+#content #about .ttr {
+  display: block;
+  top: -100px;
+  left: 50%;
+  z-index: 1;
+  border-color: transparent transparent #000 transparent;
+}
+/* line 394, ../scss/breakpoints/_1030up.scss */
+#content #services {
+  /*
+  	@include image(cover, no-repeat, center center);
+  	background-image:url('../images/backgrounds/SplitShire-090001.jpg');	
+  */
+}
+/* line 399, ../scss/breakpoints/_1030up.scss */
+#content #services .title {
+  margin: 0px auto 100px;
+}
+/* line 404, ../scss/breakpoints/_1030up.scss */
+#content #services .grid .col {
+  padding-top: 30%;
+  margin-bottom: 0;
+}
+/* line 408, ../scss/breakpoints/_1030up.scss */
+#content #services .grid .col .heading {
+  padding: 22.5% 0 0% 0;
+}
+/* line 411, ../scss/breakpoints/_1030up.scss */
+#content #services .grid .col .details {
+  top: 65%;
+}
+/* line 419, ../scss/breakpoints/_1030up.scss */
+#content #tools {
+  /*
+  @include image(cover, no-repeat, center center);
+  background-image:url('../images/backgrounds/tran-mau-tri-tam-74317.jpg');
+  */
+  padding: 150px 0px 50px;
+  margin: 0 0 160px;
+}
+/* line 427, ../scss/breakpoints/_1030up.scss */
+#content #tools .title {
+  margin: 0px 25% 0px;
+}
+/* line 431, ../scss/breakpoints/_1030up.scss */
+#content #tools .grid .col .icon {
+  font-size: 15em;
+  margin: -120px;
+}
+/* line 436, ../scss/breakpoints/_1030up.scss */
+#content #client-side-skills .title {
+  margin-top: 0;
+}
+/* line 446, ../scss/breakpoints/_1030up.scss */
+#content #server-side-skills .grid {
+  padding: 10% 0 10%;
+  /*
+  @include image(cover, no-repeat, center center);
+  background-image:url('../images/backgrounds/code.jpg');	
+  */
+}
+/* line 453, ../scss/breakpoints/_1030up.scss */
+#content #server-side-skills .grid .col .icon {
+  font-size: 20em;
+  margin: -160px;
+}
+/* line 456, ../scss/breakpoints/_1030up.scss */
+#content #server-side-skills .tt1, #content #server-side-skills .tt2 {
+  top: 0px;
+}
+/* line 470, ../scss/breakpoints/_1030up.scss */
+#content #work .title {
+  margin: 0 25% 10%;
+}
+/* line 475, ../scss/breakpoints/_1030up.scss */
+#content #work .project-wrap .left .screenshot {
+  transform: perspective(6000px) rotateY(45deg);
+}
+/* line 479, ../scss/breakpoints/_1030up.scss */
+#content #work .project-wrap .right .screenshot {
+  transform: perspective(6000px) rotateY(-45deg);
+}
+/* line 481, ../scss/breakpoints/_1030up.scss */
+#content #work .project-wrap .project {
+  margin: 10% 0 10%;
+  height: 75vh;
+}
+/* line 486, ../scss/breakpoints/_1030up.scss */
+#content #work .project-wrap #subnav-work {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  z-index: 2;
+}
+/* line 494, ../scss/breakpoints/_1030up.scss */
+#content #work .project-wrap #subnav-work .menu-holder {
+  display: inline-block;
+  position: relative;
+}
+/* line 498, ../scss/breakpoints/_1030up.scss */
+#content #work .project-wrap #subnav-work .menu-holder .menu-item, #content #work .project-wrap #subnav-work .menu-holder .space {
+  position: relative;
+  cursor: pointer;
+  float: left;
+  width: 34px;
+  height: 34px;
+}
+/* line 507, ../scss/breakpoints/_1030up.scss */
+#content #work .project-wrap #subnav-work .menu-holder .menu-item img, #content #work .project-wrap #subnav-work .menu-holder .space img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+/* line 515, ../scss/breakpoints/_1030up.scss */
+#content #work .project-wrap #subnav-work .menu-holder .menu-item .in, #content #work .project-wrap #subnav-work .menu-holder .space .in {
+  visibility: inherit;
+  -ms-filter: "alpha(Opacity=30)";
+  filter: alpha(opacity=30);
+  opacity: 0.3;
+  transition: opacity 0.5s ease-in-out;
+}
+/* line 522, ../scss/breakpoints/_1030up.scss */
+#content #work .project-wrap #subnav-work .menu-holder .menu-item .out, #content #work .project-wrap #subnav-work .menu-holder .space .out {
+  -ms-filter: "alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+  visibility: hidden;
+}
+/* line 530, ../scss/breakpoints/_1030up.scss */
+#content #work .project-wrap #subnav-work .menu-holder .selected {
+  cursor: default;
+}
+/* line 533, ../scss/breakpoints/_1030up.scss */
+#content #work .project-wrap #subnav-work .menu-holder .selected .in {
+  opacity: 1;
+}
+/* line 534, ../scss/breakpoints/_1030up.scss */
+#content #work .project-wrap #subnav-work .menu-holder .selected .out {
+  display: inline;
+  visibility: inherit;
+  -ms-filter: "alpha(Opacity=100)";
+  filter: alpha(opacity=100);
+  opacity: 1;
+}
+
+/* line 552, ../scss/breakpoints/_1030up.scss */
+footer {
+  padding: 50px 0 50px 20px;
+}
+
+/* line 560, ../scss/breakpoints/_1030up.scss */
+.error404 #container #inner-content {
+  margin-top: 15%;
+}
+/* line 565, ../scss/breakpoints/_1030up.scss */
+.error404 #container #inner-content #logo img {
+  width: 30%;
+}
+
+/*
+you can call the larger styles if you want, but there's really no need
+*/
+/******************************************************************
+ADDITIONAL IE FIXES
+These fixes are now ONLY seen by IE, so you don't have to worry
+about using prefixes, although it's best practice. For more info
+on using Modernizr classes, check out this link:
+http://www.modernizr.com/docs/
+******************************************************************/
+/*
+For example, you can use something like:
+
+.no-textshadow .class { ... }
+
+You can also target specific versions by using the classes applied to
+the html element. These can sometimes change, so take a look inside the
+header.php file to see what they are:
+
+
+.lt-ie8 .class { ... }
+
+*/

@@ -1,0 +1,312 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Typography
+
+Need to import a font or set of icons for your site? Drop them in
+here or just use this to establish your typographical grid. Or not.
+Do whatever you want to...GOSH!
+
+Helpful Articles:
+http://trentwalton.com/2012/06/19/fluid-type/
+http://ia.net/blog/responsive-typography-the-basics/
+http://alistapart.com/column/responsive-typography-is-a-physical-discipline
+
+******************************************************************/
+
+
+/*********************
+FONT FACE (IN YOUR FACE)
+*********************/
+
+/*  To embed your own fonts, use this syntax
+  and place your fonts inside the
+  library/fonts folder. For more information
+  on embedding fonts, go to:
+  http://www.fontsquirrel.com/
+  Be sure to remove the comment brackets.
+*/
+
+/*  
+@font-face {
+      font-family: 'Font Name';
+      src: url('library/fonts/font-name.eot');
+      src: url('library/fonts/font-name.eot?#iefix') format('embedded-opentype'),
+             url('library/fonts/font-name.woff') format('woff'),
+             url('library/fonts/font-name.ttf') format('truetype'),
+             url('library/fonts/font-name.svg#font-name') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+*/
+
+  
+@font-face {
+      font-family: 'BaronNeue';
+      src: url('../fonts/BaronNeue/BaronNeue.eot');
+      src: url('../fonts/BaronNeue/BaronNeue.eot?#iefix') format('embedded-opentype'),
+             url('../fonts/BaronNeue/BaronNeue.woff') format('woff'),
+             url('../fonts/BaronNeue/BaronNeue.ttf') format('truetype'),
+             url('../fonts/BaronNeue/BaronNeue.svg#font-name') format('svg');
+      font-weight: normal;
+      font-style: normal;
+  }
+@font-face {
+  font-family: "icon-font-1";
+  src:url("../fonts/icon-font-1/icon-font-1.eot");
+  src:url("../fonts/icon-font-1/icon-font-1.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/icon-font-1/icon-font-1.woff") format("woff"),
+    url("../fonts/icon-font-1/icon-font-1.ttf") format("truetype"),
+    url("f../fonts/icon-font-1/icon-font-1.svg#icon-font-1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+[data-icon]:before {
+  font-family: "icon-font-1" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "icon-font-1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-angle-down:before {
+  content: "\61";
+}
+.icon-angle-up:before {
+  content: "\62";
+}
+.icon-angle-right:before {
+  content: "\63";
+}
+.icon-angle-left:before {
+  content: "\64";
+}
+.icon-arrow-circle-o-down:before {
+  content: "\65";
+}
+.icon-arrow-circle-o-up:before {
+  content: "\66";
+}
+.icon-arrow-up:before {
+  content: "\67";
+}
+.icon-arrow-right:before {
+  content: "\68";
+}
+.icon-arrow-left:before {
+  content: "\69";
+}
+.icon-arrow-down:before {
+  content: "\6a";
+}
+.icon-arrow-circle-up:before {
+  content: "\6b";
+}
+.icon-arrow-circle-right:before {
+  content: "\6c";
+}
+.icon-arrow-circle-o-right:before {
+  content: "\6d";
+}
+.icon-arrow-circle-o-left:before {
+  content: "\6e";
+}
+.icon-arrow-circle-left:before {
+  content: "\6f";
+}
+.icon-arrow-circle-down:before {
+  content: "\70";
+}
+.icon-behance:before {
+  content: "\71";
+}
+.icon-chevron-down:before {
+  content: "\72";
+}
+.icon-chevron-left:before {
+  content: "\73";
+}
+.icon-chevron-right:before {
+  content: "\74";
+}
+.icon-chevron-up:before {
+  content: "\75";
+}
+.icon-css3:before {
+  content: "\76";
+}
+.icon-dribbble:before {
+  content: "\77";
+}
+.icon-git:before {
+  content: "\78";
+}
+.icon-git-square:before {
+  content: "\79";
+}
+.icon-google-plus:before {
+  content: "\7a";
+}
+.icon-github:before {
+  content: "\41";
+}
+.icon-github-alt:before {
+  content: "\42";
+}
+.icon-github-square:before {
+  content: "\43";
+}
+.icon-html5:before {
+  content: "\44";
+}
+.icon-linkedin:before {
+  content: "\45";
+}
+.icon-linkedin-square:before {
+  content: "\46";
+}
+.icon-facebook:before {
+  content: "\47";
+}
+.icon-facebook-official:before {
+  content: "\48";
+}
+.icon-facebook-square:before {
+  content: "\49";
+}
+.icon-wordpress:before {
+  content: "\4a";
+}
+.icon-ai:before {
+  content: "\4b";
+}
+.icon-css3-1:before {
+  content: "\4c";
+}
+.icon-dw:before {
+  content: "\4d";
+}
+.icon-git-1:before {
+  content: "\4e";
+}
+.icon-html5-1:before {
+  content: "\4f";
+}
+.icon-jquery:before {
+  content: "\50";
+}
+.icon-mysql:before {
+  content: "\51";
+}
+.icon-php:before {
+  content: "\52";
+}
+.icon-ps:before {
+  content: "\53";
+}
+.icon-share:before {
+  content: "\55";
+}
+.icon-share-outline:before {
+  content: "\56";
+}
+.icon-share-1:before {
+  content: "\57";
+}
+.icon-share-alt:before {
+  content: "\58";
+}
+.icon-share-alt-square:before {
+  content: "\59";
+}
+.icon-bars:before {
+  content: "\5a";
+}
+.icon-list:before {
+  content: "\30";
+}
+.icon-menu:before {
+  content: "\31";
+}
+.icon-align-justify:before {
+  content: "\32";
+}
+.icon-sass:before {
+  content: "\33";
+}
+.icon-map-marker:before {
+  content: "\54";
+}
+.icon-times:before {
+  content: "\34";
+}
+.icon-times-circle-o:before {
+  content: "\36";
+}
+.icon-cancel:before {
+  content: "\37";
+}
+.icon-times-circle:before {
+  content: "\35";
+}
+
+/*
+The following is based of Typebase:
+https://github.com/devinhunt/typebase.css
+I've edited it a bit, but it's a nice starting point.
+*/
+
+
+// font stacks
+$sans-serif:        "Helvetica Neue", Helvetica, Arial, sans-serif;
+$serif:             "Georgia", Cambria, Times New Roman, Times, serif;
+$new: 				HelveticaNeueW02-75Bold,Helvetica,Arial,Sans-Serif;
+/*
+ i imported this one in the functions file so bones would look sweet.
+ don't forget to remove it for your site.
+*/
+$lato:              'Lato', $sans-serif;
+
+/*
+some nice typographical defaults
+more here: http://www.newnet-soft.com/blog/csstypography
+*/
+p {
+  -ms-word-wrap: break-word;
+  word-break: break-word; //non-standart css for webkit
+  word-wrap: break-word;
+  // cleaning up the ragged lines and breaks
+  -webkit-hyphens: auto;
+     -moz-hyphens: auto;
+          hyphens: auto;
+  // sets a minimum number of characters before and after the break
+  -webkit-hyphenate-before: 2;
+   -webkit-hyphenate-after: 3;
+           hyphenate-lines: 3;
+  // enabling fancy ligatures when available
+  -webkit-font-feature-settings: "liga", "dlig";
+   -moz-font-feature-settings: "liga=1, dlig=1";
+      -ms-font-feature-settings: "liga", "dlig";
+       -o-font-feature-settings: "liga", "dlig";
+          font-feature-settings: "liga", "dlig";
+}
+

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="200px" height="200px" viewBox="0 0 200 200" enable-background="new 0 0 200 200" xml:space="preserve">
+<g id="XMLID_1_">
+	<g>
+		<polygon fill="#010101" points="112.131,87.424 200.082,99.42 200.082,99.433 200.005,99.971 113.785,99.971 113.785,99.407 		"/>
+		<polygon fill="#010101" points="112.131,87.424 100.759,85.873 100.733,85.873 100.349,85.873 100.349,2.371 		"/>
+		<polygon fill="#010101" points="113.785,99.971 100.349,99.971 100.349,85.873 100.733,85.873 100.759,85.873 112.131,87.424 
+			113.785,99.407 		"/>
+		<polygon fill="#010101" points="100.349,199.212 88.092,112.519 100.349,114.186 		"/>
+		<polygon fill="#010101" points="100.349,114.186 88.092,112.519 86.425,100.728 86.425,99.971 100.349,99.971 		"/>
+		<polygon fill="#010101" points="0,99.971 86.425,99.971 86.425,100.728 88.092,112.519 -0.026,100.561 		"/>
+	</g>
+	<g>
+		<polyline fill="none" stroke="#010101" stroke-miterlimit="10" points="100.349,0 100.349,2.371 100.349,85.873 100.349,99.971 
+			100.349,114.186 100.349,199.212 100.349,199.942 		"/>
+		<polyline fill="none" stroke="#010101" stroke-miterlimit="10" points="0,99.971 86.425,99.971 100.349,99.971 113.785,99.971 
+			200.005,99.971 		"/>
+		<polyline fill="none" stroke="#010101" stroke-miterlimit="10" points="100.759,85.873 112.131,87.424 200.082,99.42 
+			200.082,99.433 200.223,99.446 		"/>
+		<polyline fill="none" stroke="#010101" stroke-miterlimit="10" points="86.425,100.728 88.092,112.519 100.349,199.212 
+			100.451,199.942 		"/>
+		<polyline fill="none" stroke="#010101" stroke-miterlimit="10" points="100.566,114.211 100.349,114.186 88.092,112.519 
+			-0.026,100.561 		"/>
+		<polyline fill="none" stroke="#010101" stroke-miterlimit="10" points="100.041,0.154 100.349,2.371 112.131,87.424 
+			113.785,99.407 		"/>
+	</g>
+</g>
+</svg>
